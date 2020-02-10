@@ -1,0 +1,12 @@
+<h1>Товары из категории {{category_name}}:</h1>
+<ul>
+{% for product in products %}
+    <li><a href="/shop/item/{{product.id}}">
+        Название: {{ product.name }}<br>
+        Цена: {{ product.price }} тенге
+    </a></li>
+    <br>
+{% endfor %}
+</ul>
+<br>
+<a href="/shop/categories/">Все категории</a>

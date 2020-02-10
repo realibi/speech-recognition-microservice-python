@@ -1,0 +1,6 @@
+<h1>Все категории:</h1>
+<ul>
+{% for category in categories %}
+    <li><a href="/shop/category/{{category.name}}">{{ category.name }}</a></li>
+{% endfor %}
+</ul>
