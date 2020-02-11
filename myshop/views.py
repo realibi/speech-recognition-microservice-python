@@ -6,10 +6,13 @@ import uuid
 from django.core.files.storage import FileSystemStorage
 import speech_recognition as sr
 
+from django.views.decorators.csrf import csrf_exempt
+
 
 def index(request):
     return render(request, 'index.html')
 
+@csrf_exempt
 def recognize(request):
     someFile = request.FILES['upload']
     save_path = str(uuid.uuid4()) + '.wav'
